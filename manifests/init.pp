@@ -5,5 +5,5 @@ Exec["apt-update"] -> Package <| |> # Ensures apt-get update is run before any p
 
 Package { ensure => "present" }
 package { 'dev':
-    name = ['tmux', 'python-virtualenv', 'virtualenvwrapper', 'vim', ]
+    name => ['tmux', 'python-virtualenv', 'virtualenvwrapper', 'vim', ]
 }

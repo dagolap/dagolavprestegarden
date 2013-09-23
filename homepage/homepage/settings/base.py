@@ -9,6 +9,12 @@ def get_env_variable(var_name):
     except KeyError:
         raise ImproperlyConfigured("Set the %s environment variable" % (var_name, ))
 
+# Find out what the base path for this project is so we can generate full paths based on relative paths.
+PROJECT_SETTINGS_PATH = os.path.realpath(os.path.dirname(__file__))
+# Root directory. Contains manage.py
+PROJECT_ROOT_PATH = os.path.join(PROJECT_SETTINGS_PATH, '../..')
+
+
 
 # Django settings for homepage project.
 ADMINS = (
@@ -103,10 +109,8 @@ ROOT_URLCONF = 'homepage.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'homepage.wsgi.application'
 
-EMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
+TEMPLATE_DIRS = (
+    PROJECT_ROOT_PATH + "/templates",
 )
 
 INSTALLED_APPS = (

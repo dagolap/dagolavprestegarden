@@ -9,6 +9,7 @@ class Post(models.Model):
     body = models.TextField(null=True, verbose_name=_("body"))
     author = models.ForeignKey(User ,related_name="posts", null=False, verbose_name=_("author"))
     created = models.DateTimeField(null=False, verbose_name=_("created"))
+    slug = models.CharField(max_length=100, null=False, unique=True, verbose_name=_("slug"))
 
     def __unicode__(self):
         return self.title

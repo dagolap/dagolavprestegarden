@@ -1,0 +1,21 @@
+Blog module:
+  ☐ Front page posts listing
+  ☐ Archive
+  ☐ Render markdown
+  ☐ Support tags
+  ☐ RSS Feed
+  ☐ Choose slug
+Flat pages:
+  ☐ Choose slug
+  ☐ Render markdown
+  ☐ Sitemap
+  ☐ Chose menu
+Portfolio / Projects page:
+  ☐ Image, text, link
+
+Comment system:
+  ☐ Generic
+  ☐ On:
+    ☐ Blog posts
+    ☐ Flat pages
+    ☐ Portfolio

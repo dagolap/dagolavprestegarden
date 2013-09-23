@@ -1,5 +1,16 @@
-# Django settings for homepage project.
+import os
 
+from django.core.exceptions import ImproperlyConfigured
+
+
+def get_env_variable(var_name):
+    try:
+        return os.environ[var_name]
+    except KeyError:
+        raise ImproperlyConfigured("Set the %s environment variable" % (var_name, ))
+
+
+# Django settings for homepage project.
 ADMINS = (
     ('Dag Olav Prestegarden', 'dagolav@prestegarden.com'),
 )
@@ -68,8 +79,7 @@ STATICFILES_FINDERS = (
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
-# Make this unique, and don't share it with anybody.
-SECRET_KEY = 'yu2j$j&^2)@biu*z^+b)$(*m-_2)294!0@x1(uz1m^n3o*ich2'
+
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (

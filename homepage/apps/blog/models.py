@@ -17,4 +17,4 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         from django.core.urlresolvers import reverse
-        print reverse('post_details', args=[self.slug])
+        return reverse('post_details', kwargs={"slug":self.slug})

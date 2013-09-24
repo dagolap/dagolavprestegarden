@@ -1,8 +1,16 @@
 {% extends "base.html" %}
+{% load markup %}
 
 {% block content %}
-<h1>Hello World!</h1>
-<p>
-    Dag Olav Prestegarden lives here.
-</p>
-{% endblock %}
+<h1>Blog Posts</h1>
+{% for post in object_list %}
+<section id="blog-posts">
+    <article class="blog-post">
+        <h1 class="post-heading">{{ post.title }}</h1>
+        <footer class="post-info">by {{ post.author }}, published {{ post.created }}</footer>
+        <p class="post-ingress">{{ post.ingress|markdown }}</p>
+        <p><a href="{{ post.get_absolute_url }}">Read more...</a></p>
+</article>
+</section>
+{% endfor %}
+{% endblock %}s

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load markup %}
+
+{% block content %}
+<article class="blog-post">
+    <h1 class="post-heading">{{ post.title }}</h1>
+    <footer class="post-info">by {{ post.author }}, published {{ post.created }}</footer>
+    <p class="post-body">{{ post.body|markdown }}</p>
+</article>
+</section>{% endblock %}

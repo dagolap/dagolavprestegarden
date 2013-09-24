@@ -1,8 +1,11 @@
 from django.conf.urls import patterns, url
 
-from django.views.generic import TemplateView
+from django.views.generic import DetailView, ListView
 
+from .views import BlogListView, PostDetailView
+from .models import Post
 
-urlpatterns = patterns('apps.blog',
-    url(r'^$', TemplateView.as_view(template_name="blog/index.html")),
+urlpatterns = patterns('',
+    url(r'^$', BlogListView.as_view(), name="blog_index"),
+    url(r'^details/(?P<slug>\w+)/$', PostDetailView.as_view(), name="post_details"),
 )

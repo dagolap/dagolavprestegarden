@@ -1,11 +1,18 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html>
 <head>
     <title>Dag Olav Prestegarden</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/bootstrap.min.css">
 
     {% block extrahead %}{% endblock %}
 </head>
 <body>
     {% block content %}{% endblock %}
+
+
+    <script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+    {% block js %}{% endblock%}
 </body>
 </html>

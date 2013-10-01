@@ -120,7 +120,8 @@ INSTALLED_APPS = (
 
     'south',
 
-    'apps.blog'
+    'apps.blog',
+    'apps.portfolio',
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'

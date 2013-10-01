@@ -4,18 +4,26 @@
 {% block blogcontent %}
 
 {% for post in object_list %}
-<section id="blog-posts">
-    <article class="blog-post">
+  {% if forloop.first %}
+    <article class="blog-post col-lg-12">
         <h1 class="post-heading"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h1>
-        <p class="lead">by {{ post.author }}</p>
+        <p><span class="glyphicon glyphicon-time"></span> Posted on {{ post.created }} by {{ post.author }}</p>
         <hr>
-        <p><span class="glyphicon glyphicon-time"></span> Posted on {{ post.created }}</p>
-        <hr>
-        <img src="http://placehold.it/900x300" class="img-responsive">
-        <hr>
+        <a href="{{ post.get_absolute_url }}"><img src="http://placehold.it/900x300" class="img-responsive"></a>
         <p class="lead">{{ post.ingress|markdown }}</p>
         <p><a href="{{ post.get_absolute_url }}">Read more...</a></p>
-</article>
+    </article>
+    <hr>
+  {% else %}
+    <article class="blog-post col-lg-6">
+        <h3 class="post-heading"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
+        <p><span class="glyphicon glyphicon-time"></span>{{ post.created }}</p>
+        <hr>
+        <a href="{{ post.get_absolute_url }}"><img src="http://placehold.it/900x300" class="img-responsive"></a>
+        <p class="lead">{{ post.ingress|markdown }}</p>
+        <p><a href="{{ post.get_absolute_url }}">Read more...</a></p>
+    </article>
+  {% endif %}
 {% endfor %}
 
 {% endblock %}

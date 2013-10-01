@@ -1,6 +1,22 @@
 {% extends "portfolio/base.html" %}
+{% load markup %}
 
 
 {% block portfoliocontent %}
-  Hello World!
+  {% for project in object_list %}
+      <div class="row">
+
+        <div class="col-lg-7 col-md-7">
+          <a href="#"><img class="img-responsive" src="http://placehold.it/700x300"></a>
+        </div>
+
+        <div class="col-lg-5 col-md-5">
+          <h3>{{ project.title }}</h3>
+          <h4>{{ project.subtitle }}</h4>
+          {{ project.description|markdown }}
+          <a class="btn btn-primary" href="{{ project.get_absolute_url }}">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+        </div>
+      </div>
+      <hr>
+  {% endfor %}
 {% endblock %}

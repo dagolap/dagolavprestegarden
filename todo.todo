@@ -1,5 +1,5 @@
 Blog module:
-  ☐ Front page posts listing
+  ✔ Front page posts listing @done (13-10-01 19:27)
   ☐ Archive
   ✔ Render markdown @done (13-10-01 14:03)
   ☐ Support tags
@@ -7,8 +7,8 @@ Blog module:
   ✔ Choose slug @done (13-09-23 14:15)
   ☐ Render image in details and listing
 Flat pages:
-  ☐ Choose slug
-  ☐ Render markdown
+  ✔ Choose slug @done (13-10-01 19:27)
+  ✔ Render markdown @done (13-10-01 19:27)
   ☐ Sitemap
   ☐ Chose menu
 Portfolio / Projects page:

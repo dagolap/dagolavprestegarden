@@ -7,7 +7,7 @@
   {% if forloop.first %}
     <article class="blog-post col-lg-12">
         <h1 class="post-heading"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h1>
-        <p><span class="glyphicon glyphicon-time"></span> Posted on {{ post.created }} by {{ post.author }}</p>
+        <p><span class="glyphicon glyphicon-time"></span> Posted on {{ post.created }} by {{ post.author.get_full_name }}</p>
         <hr>
         <a href="{{ post.get_absolute_url }}"><img src="http://placehold.it/900x300" class="img-responsive"></a>
         <p class="lead">{{ post.ingress|markdown }}</p>

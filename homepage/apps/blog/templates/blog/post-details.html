@@ -5,7 +5,7 @@
 
 <article>
   <h1>{{ post.title }}</h1>
-  <p class="lead">by {{ post.author }}</p>
+  <p class="lead">by {{ post.author.get_full_name }}</p>
   <hr>
   <p><span class="glyphicon glyphicon-time"></span> Posted on {{ post.created }}</p>
   <hr>

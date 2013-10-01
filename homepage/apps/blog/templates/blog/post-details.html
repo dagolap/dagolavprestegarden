@@ -1,10 +1,40 @@
-{% extends "base.html" %}
+{% extends "blog/base.html" %}
 {% load markup %}
 
-{% block content %}
-<article class="blog-post">
-    <h1 class="post-heading">{{ post.title }}</h1>
-    <footer class="post-info">by {{ post.author }}, published {{ post.created }}</footer>
-    <p class="post-body">{{ post.body|markdown }}</p>
+{% block blogcontent %}
+
+<article>
+  <h1>{{ post.title }}</h1>
+  <p class="lead">by {{ post.author }}</p>
+  <hr>
+  <p><span class="glyphicon glyphicon-time"></span> Posted on {{ post.created }}</p>
+  <hr>
+  <img src="http://placehold.it/900x300" class="img-responsive">
+  <hr>
+  <p class="lead">{{ post.ingress|markdown }}</p>
+  {{ post.body|markdown }}
 </article>
-</section>{% endblock %}
+<hr>
+
+<!-- the comment box -->
+<div class="well">
+  <h4>Leave a Comment:</h4>
+  <form role="form">
+    <div class="form-group">
+      <textarea class="form-control" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<hr>
+
+<!-- the comments -->
+<h3>Test comment <small>9:41 PM on August 24, 2013</small></h3>
+<p>Yo, I'm a comment. What's up dawg?</p>
+
+<h3>Another comment <small>9:47 PM on August 24, 2013</small></h3>
+<p>Lorem ipsum whatever</p>
+
+
+{% endblock %}

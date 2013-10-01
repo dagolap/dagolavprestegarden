@@ -9,7 +9,7 @@ urlpatterns = patterns('',
     url(r'^$', 'apps.blog.views.index', name="index"),
     url(r'^blog/', include('apps.blog.urls')),
     url(r'^projects/', include('apps.portfolio.urls')),
-
+    url(r'^page/', include('apps.pages.urls')),
 
     url(r'^grappelli/', include('grappelli.urls')),
     url(r'^admin/filebrowser/', include(fbsite.urls)),

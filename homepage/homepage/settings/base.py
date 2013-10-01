@@ -123,6 +123,7 @@ INSTALLED_APPS = (
 
     'apps.blog',
     'apps.portfolio',
+    'apps.pages',
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'

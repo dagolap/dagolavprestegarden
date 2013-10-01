@@ -1,10 +1,10 @@
 Blog module:
   ☐ Front page posts listing
   ☐ Archive
-  ☐ Render markdown
+  ✔ Render markdown @done (13-10-01 14:03)
   ☐ Support tags
   ☐ RSS Feed
-  ☐ Choose slug
+  ✔ Choose slug @done (13-09-23 14:15)
 Flat pages:
   ☐ Choose slug
   ☐ Render markdown
@@ -19,3 +19,6 @@ Comment system:
     ☐ Blog posts
     ☐ Flat pages
     ☐ Portfolio
+
+Design:
+ ✔ Get some basic bootstrap going @done (13-10-01 14:03)

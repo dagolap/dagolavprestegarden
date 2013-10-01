@@ -8,3 +8,4 @@ class Project(models.Model):
     description = models.TextField(_("description"))
     image = FileBrowseField(_("image"), directory="images/", extensions=[".jpg",".jpeg",".png",".gif"], blank=True, null=True, max_length=200)
     sort_order = models.SmallIntegerField(_("sort order"))
+    slug = models.CharField(_("slug"), max_length=100, null=False, unique=True)

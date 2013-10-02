@@ -1,13 +1,13 @@
 from datetime import datetime
 
 from django.test import TestCase
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 
 from .models import Post
 
 class BlogPostTests(TestCase):
     def setUp(self):
-        self.user = User.objects.create(username="fooUser")
+        self.user = get_user_model().objects.create(username="fooUser")
         self.post = Post.objects.create(title="foo", created=datetime.now(), author=self.user)
 
     def test_should_return_correct_unicode_representation(self):

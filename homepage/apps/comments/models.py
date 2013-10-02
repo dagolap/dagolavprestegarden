@@ -11,5 +11,7 @@ class Comment(models.Model):
 
     active = models.BooleanField(_("active"))
 
+    target = models.URLField(_("target"), max_length=400, null=False, blank=True)
+
     def __unicode__(self):
         return "{title} by {author} on {created}".format(title=self.title, author=self.author, created=str(self.created))

@@ -24,6 +24,7 @@ ADMINS = (
 MANAGERS = ADMINS
 
 GRAPPELLI_ADMIN_TITLE="<a href='/'>Dag Olav Prestegarden</a>"
+CRISPY_TEMPLATE_PACK = "bootstrap3"
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
@@ -114,16 +115,19 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.markup',
+
     'grappelli',
     'filebrowser',
-    'django.contrib.admin',
-    'django.contrib.admindocs',
-
     'south',
+    'crispy_forms',
 
     'apps.blog',
     'apps.portfolio',
     'apps.pages',
+
+
+    'django.contrib.admin',
+    'django.contrib.admindocs',
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'

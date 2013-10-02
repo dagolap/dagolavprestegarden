@@ -11,7 +11,7 @@
         <hr>
         <a href="{{ post.get_absolute_url }}"><img src="http://placehold.it/900x300" class="img-responsive"></a>
         <p class="lead">{{ post.ingress|markdown }}</p>
-        <p><a href="{{ post.get_absolute_url }}">Read more...</a> (<a href="{{ post.get_absolute_url }}#comments">0 comments</a>)</p>
+        <p><a href="{{ post.get_absolute_url }}">Read more...</a></p>
     </article>
     <hr>
   {% else %}
@@ -21,7 +21,7 @@
         <hr>
         <a href="{{ post.get_absolute_url }}"><img src="http://placehold.it/900x300" class="img-responsive"></a>
         <p class="lead">{{ post.ingress|markdown }}</p>
-        <p><a href="{{ post.get_absolute_url }}">Read more...</a> (<a href="{{ post.get_absolute_url }}#comments">0 comments</a>)</p>
+        <p><a href="{{ post.get_absolute_url }}">Read more...</a></p>
     </article>
   {% endif %}
 {% endfor %}

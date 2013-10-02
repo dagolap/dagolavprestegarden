@@ -12,6 +12,7 @@ urlpatterns = patterns('',
     url(r'^page/', include('apps.pages.urls')),
     url(r'^comments/', include('apps.comments.urls')),
 
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^grappelli/', include('grappelli.urls')),
     url(r'^admin/filebrowser/', include(fbsite.urls)),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

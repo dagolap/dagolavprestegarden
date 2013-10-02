@@ -120,6 +120,7 @@ INSTALLED_APPS = (
     'filebrowser',
     'south',
     'crispy_forms',
+    'rest_framework',
 
     'apps.blog',
     'apps.portfolio',

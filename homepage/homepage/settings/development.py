@@ -2,6 +2,7 @@ from .base import *
 
 DEBUG = True
 TEMPLATE_DEBUG = True
+TEMPLATE_STRING_IF_INVALID = "INVALID EXPRESSION: %s"
 
 EMAIL_HOST = "localhost"
 EMAIL_PORT = 1025

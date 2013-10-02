@@ -124,6 +124,7 @@ INSTALLED_APPS = (
     'apps.blog',
     'apps.portfolio',
     'apps.pages',
+    'apps.comments',
 
 
     'django.contrib.admin',

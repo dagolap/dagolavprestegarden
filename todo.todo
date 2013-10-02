@@ -18,11 +18,10 @@ Portfolio / Projects page:
   ☐ Render image in details and listing
 
 Comment system:
-  ☐ Generic
-  ☐ On:
-    ☐ Blog posts
-    ☐ Flat pages
-    ☐ Portfolio
+  ☐ Generic - Either use URL or some URL + slug/id as identifier. No Django foreign keys
+  ☐ Async API
+  ☐ Spam filtering
+  ☐ OpenID/OAuth etc?
 
 Design:
  ✔ Get some basic bootstrap going @done (13-10-01 14:03)

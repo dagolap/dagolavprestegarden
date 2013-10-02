@@ -1,6 +1,6 @@
 {% extends "blog/base.html" %}
 {% load markup %}
-
+{% load comments_tags %}
 {% block blogcontent %}
 
   <article>
@@ -16,5 +16,6 @@
   </article>
   <hr>
 
+  {% show_comments post.get_identifier_url "http://localhost:8080" %}
 
 {% endblock %}

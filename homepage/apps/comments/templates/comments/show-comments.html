@@ -1,0 +1,15 @@
+{% load markup %}
+{% load crispy_forms_tags %}
+<hr>
+<div id="comments">
+  <div class="well">
+    {% crispy form %}
+  </div>
+  <hr>
+
+  {% for comment in comments %}
+    <h3>{{ comment.title }} <small>by {{ comment.author }} on {{ comment.created }}</small></h3>
+    {{ comment.comment|markdown }}
+  {% endfor %}
+
+</div>

@@ -2,8 +2,8 @@ Blog module:
   ✔ Front page posts listing @done (13-10-01 19:27)
   ☐ Archive
   ✔ Render markdown @done (13-10-01 14:03)
-  ☐ Support tags
-  ☐ RSS Feed
+  ✔ Support tags @done (13-10-04 14:19)
+  ✔ RSS Feed @done (13-10-04 14:19)
   ✔ Choose slug @done (13-09-23 14:15)
   ☐ Render image in details and listing
 Flat pages:

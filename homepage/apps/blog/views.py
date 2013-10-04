@@ -5,7 +5,7 @@ from .models import Post
 
 class BlogListView(ListView):
     template_name = "blog/index.html"
-    queryset = Post.objects.order_by('-created')[:6]
+    queryset = Post.objects.order_by('-created')[:10]
 
 class PostDetailView(DetailView):
     template_name="blog/post-details.html"

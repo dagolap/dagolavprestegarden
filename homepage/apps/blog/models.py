@@ -2,6 +2,7 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.conf import settings
 
+from taggit.managers import TaggableManager
 
 # Create your models here.
 class Post(models.Model):
@@ -11,6 +12,7 @@ class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL ,related_name="posts", null=False, verbose_name=_("author"))
     created = models.DateTimeField(null=False, verbose_name=_("created"))
     slug = models.CharField(max_length=100, null=False, unique=True, verbose_name=_("slug"))
+    tags = TaggableManager()
 
     def __unicode__(self):
         return self.title
